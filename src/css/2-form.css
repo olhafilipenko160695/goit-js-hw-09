@@ -1,0 +1,28 @@
+/* button {
+  background-color: rgba(78, 117, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: block;
+  min-width: 95px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+
+  margin-top: 20px;
+}
+form {
+  display: flexbox;
+  margin-left: 24px;
+  width: 408px;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(46, 47, 66, 1);
+  width: 360px;
+  height: 40px;
+} */
