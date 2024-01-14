@@ -93,6 +93,6 @@ function clickOnImage(evt) {
   evt.preventDefault();
 }
 // Описаний в документації
-import SimpleLightbox from '/node_modules/simplelightbox';
+import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
