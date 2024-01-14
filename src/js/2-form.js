@@ -8,8 +8,9 @@ form.addEventListener('submit', onSubmit);
 
 function onInput() {
   const userData = {
-    email: email.value,
-    message: message.value,
+    email: email.value.trim(),
+
+    message: message.value.trim(),
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(userData));
 }
@@ -17,8 +18,10 @@ function onInput() {
 const storedData = localStorage.getItem(STORAGE_KEY);
 if (storedData) {
   const parsedData = JSON.parse(storedData);
-  email.value = parsedData.email;
-  message.value = parsedData.message;
+  if (parsedData && parsedData.email && parsedData.message) {
+    email.value = parsedData.email;
+    message.value = parsedData.message;
+  }
 }
 
 function onSubmit(evt) {
