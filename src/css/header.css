@@ -1,21 +1,33 @@
-.header {
-  padding: 20px 0;
-}
-
-.nav-list {
+ul {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  gap: 24px;
+  list-style: none;
+}
+
+.gallery-item {
+  list-style: none;
+  width: 360px;
+  height: 200px;
+}
+.gallery-item img {
+  width: 360px;
+  height: 200px;
+}
+.moodal {
+  width: 1112px;
+  height: 640px;
+  padding: 28px 164px;
+  user-select: none;
+  background-color: #2e2f42cc;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
 }
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+.moodal img {
+  width: 1112px;
+  height: 640px;
 }
