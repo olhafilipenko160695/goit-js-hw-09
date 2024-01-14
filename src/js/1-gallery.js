@@ -1,5 +1,7 @@
-//** Масив зображень*/
-
+import SimpleLightbox from 'simplelightbox';
+// additionaly import style
+import 'simplelightbox/dist/simple-lightbox.min.css';
+//**Array of images*/
 const images = [
   {
     preview:
@@ -67,32 +69,24 @@ const images = [
 ];
 const container = document.querySelector('.gallery');
 container.insertAdjacentHTML('afterbegin', listOfImages(images));
-container.addEventListener('click', clickOnImage);
 
-//**Додавання розмітки */
+//**Adding markup*/
 function listOfImages(arr) {
   return arr
     .map(
       ({ preview, original, description }) =>
         `<li class="gallery-item">
   <a class="gallery-link" href="${original}">
-    <img
-      class="gallery-image"
-      src="${preview}"
-      alt="${description}"
-    />
+    <img class="gallery-image" src="${preview}" alt="${description}" />
   </a>
 </li>`
     )
     .join('');
 }
-function clickOnImage(evt) {
-  if (evt.target === evt.currentTarget) {
-    return;
-  }
-  evt.preventDefault();
-}
-// Описаний в документації
-import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
-import 'simplelightbox/dist/simple-lightbox.min.css';
+
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+
+  captionDelay: 250,
+  spinner: true,
+});
